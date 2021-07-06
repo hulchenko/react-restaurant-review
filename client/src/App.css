@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .form {
@@ -17,6 +18,14 @@
   border-radius: 5px;
 }
 
+.reviewCard {
+  width: 25rem;
+  height: auto;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 .rating {
   display: flex;
 }
@@ -30,8 +39,12 @@ input[type='radio'] {
 }
 
 button {
-  margin-top: 15px;
-  width: 12rem;
-  height: 3rem;
+  margin: 15px;
+  height: 1.5rem;
   border-radius: 5px;
+}
+
+#updateInput {
+  width: 10rem;
+  height: 1.5rem;
 }

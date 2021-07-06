@@ -59,11 +59,11 @@ function App() {
         <button onClick={submitReview}>Submit</button>
         {restaurantList.map((value) => {
           return (
-            <h1>
-              Restaurant Name: {value.restaurantName} | Restaurant Review:
-              {value.restaurantReview} | Restaurant Rating:
-              {value.restaurantRating}
-            </h1>
+            <div className="reviewCard">
+              <h1>{value.restaurantName}</h1>
+              <h3>{value.restaurantReview}</h3>
+              <h3>{value.restaurantRating}</h3>
+            </div>
           );
         })}
       </div>
