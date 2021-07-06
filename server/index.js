@@ -1,20 +1,14 @@
 const express = require('express');
-<<<<<<< HEAD
 const bodyParser = require('body-parser');
 const app = express();
 const mysql = require('mysql'); //get dependency
 const cors = require('cors');
 
 //get database
-=======
-const app = express();
-const mysql = require('mysql');
->>>>>>> 9eac8e5f537c29e522bb21b71eae1655e19d5ca0
 const db = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: 'password',
-<<<<<<< HEAD
   database: 'restaurantdb',
 });
 
@@ -42,30 +36,13 @@ app.post('/api/insert', (req, res) => {
     sqlInsert,
     [restaurantName, restaurantReview, restaurantRating], //pasting variables here
     (err, result) => {
-      console.log(err);
+      if (err) {
+        console.log(err);
+      }
     }
   );
 });
 
 app.listen(4000, () => {
   console.log('Running on port 4000');
-=======
-  database: 'restaurant_app',
-});
-
-app.get('/api/insert', (req, res) => {
-  const sqlInsert =
-    'INSERT INTO restaurant_reviews (restaurant_name, restaurant_review) VALUES (?,?);';
-  db.query(sqlInsert, [restaurant_name, restaurant_review], (err, result) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.send('Done!');
-    }
-  });
-});
-
-app.listen(4000, () => {
-  console.log('running on port 4000');
->>>>>>> 9eac8e5f537c29e522bb21b71eae1655e19d5ca0
 });
